@@ -4,6 +4,46 @@ Below an overview of all changes in the releases.
 
 Version (Release date)
 
+1.0.3  (2017-09-07)
+
+  * Fix attempt two for: zabbix_agent_listenip not working as expected #98
+  * Updated Molecule V1 test to Molecule V2. 
+
+1.0.2  (2017-09-03)
+
+  * Fix for: zabbix_agent_listenip not working as expected #98
+  * Fix for: s/agent_interfaces/zabbix_agent_interfaces #95 && 'agent_interfaces' is undefined #94
+  * Forgot to update documentation with the new variable names (Added the `zabbix_` prefixes.)
+
+1.0.1  (2017-08-31)
+
+  * Fix for: Error in: Create directory for PSK file if not exist
+
+1.0.0  (2017-08-30)
+
+  * From ini to yml style.
+  * Used yum instead of apt #78
+  * Installing default 3.4.
+  * Prefixed all properties that started with `agent_` with the value `zabbix_`.
+  * [DOCS] Fix readme for zabbix_api_create_hosts #82 (By pull request: Logan2211 (Thanks!))
+  * Workaround https://github.com/ansible/ansible-modules-core/issues/3764 #85 (By pull request: ma-tty (Thanks!))
+  * Added Mint #88
+  * Include Debian stretch in 3.4 #89  (By pull request: rtgibbons (Thanks!))
+  * Add creation of PSK file #90
+  * Fix for: Key-dependent repository installed before the key #80
+  * Set Molecule to V1 for now since V2 is released.
+
+0.10.0  (2017-07-25)
+
+  * Added run_once to only execute the task once #77
+  * Adds zabbix_selinux variable to README #75
+  * Adding tasks for selinux #74
+  * Fix type number of jmx/ipmi #65 (By pull request: fazelgh (Thanks!))
+  * zabbix_hostmacro fix #64 (By pull request: dguihal (Thanks!))
+  * Does not confuse with zabbix_api_use setting. #61 (By pull request: i5513 (Thanks!))
+  * get gpg key over https #60 (By pull request: sjugge (Thanks!))
+  * Using the same version handling as with the zabbix-server #59
+
 0.9.0   (2016-12-30)
 
   * Fix hostname mistmatch when updating macros #54 (By pull request: tahajahangir (Thanks!))
