@@ -8,3 +8,5 @@ __pycache__
 .env
 .virtualenv
 *.pyc
+.vagrant
+*.log

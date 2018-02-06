@@ -1,0 +1,15 @@
+Vagrant.configure("2") do |config|
+
+  config.vm.define "test-zabbix-agent" do |cfg|
+    cfg.vm.box = "ubuntu/xenial64"
+
+    cfg.vm.provider "virtualbox" do |vb|
+      vb.memory = "1024"
+    end
+ 
+    cfg.vm.provision "ansible" do |ansible|
+      ansible.playbook = "test.yml"
+    end
+
+  end
+end
